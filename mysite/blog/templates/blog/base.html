@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"/>
+        <title>{% block title %}Home{% endblock %}</title>
+    </head>
+
+    <body>
+        <div id="content">
+            <div class = "title">
+                <h1>Hello, world</h1>
+                <h4>A blog to nobody in particular</h4>
+		<nav>
+				<a href="{% url 'blog:index' %}">Home</a>
+				<a href="{% url 'blog:about' %}">About</a>
+                <a href="{% url 'blog:archive' %}">Archive</a>
+				<a href="{% url 'blog:tips' %}">Tips+CSS</a>
+			</nav>
+            </div>
+            {% block content %}{% endblock %} 
+        </div>
+    </body>
+</html>

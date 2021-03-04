@@ -1,0 +1,249 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Tips{% endblock %}
+
+{% block content %}
+<h1>Seconds since Jan 1, 1970: {{ unix_timestamp }}</h1>
+<div class = "post">
+        <div class = "post-title">
+            <h2>Bash Cheat Sheet</h2>
+            <hr>
+        </div>
+        <div class = "post-content">
+            <table class = "bash-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Definition</th>
+                    <th>Usage</th>
+                </tr>
+                <tr>
+                    <td>cd</td>
+                    <td>Change to a new directory</td>
+                    <td>cd $HOME</td>
+                </tr>
+                <tr>
+                    <td>ls</td>
+                    <td>View files in a directory</td>
+                    <td>ls -lh</td>
+                </tr>
+                <tr>
+                    <td>mkdir</td>
+                    <td>Make a new directory</td>
+                    <td>mkdir new_folder</td>
+                </tr>
+                <tr>
+                    <td>rm</td>
+                    <td>Remove a file</td>
+                    <td>rm garbage.txt</td>
+                </tr>
+                <tr>
+                    <td>mv</td>
+                    <td>Move a file</td>
+                    <td>mv homework.txt /dev/null</td>
+                </tr>
+                <tr>
+                    <td>cp</td>
+                    <td>Copy a file</td>
+                    <td>cp original.txt plagarised.txt</td>
+                </tr>
+                <tr>
+                    <td>reset</td>
+                    <td>Reset bash terminal</td>
+                    <td>reset</td>
+                </tr>
+                <tr>
+                    <td>grep</td>
+                    <td>Use regular expressions to find matches in files</td>
+                    <td>grep "[a-z]*" file_with_stuff.txt</td>
+                </tr>
+                <tr>
+                    <td>cat</td>
+                    <td>Concatenate files</td>
+                    <td>cat thing1.txt thing2.txt &gt; thing3.txt</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<div class="post">
+    <div class="post-title">
+        <h2>Git Cheat Sheet</h2>
+        <hr>
+    </div>
+    <div class="post-content">
+        <table class="git-table">
+            <tr>
+                <th>Command</th>
+                <th>Definition</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>git init</td>
+                <td>Initialize a new git repository</td>
+                <td>git init</td>
+            </tr>
+            <tr>
+                <td>git clone</td>
+                <td>Clone a remote git repository</td>
+                <td>git clone git@simponic.xyz:/srv/git/dwm-rice .</td>
+            </tr>
+
+            <tr>
+                <td>git add</td>
+                <td>Add files to be staged in commit</td>
+                <td>git add .</td>
+            </tr>
+            <tr>
+                <td>git commit</td>
+                <td>Add staged files to a new commit</td>
+                <td>git commit -m "new commit"</td>
+            </tr>
+            <tr>
+                <td>git pull</td>
+                <td>Pull files from remote repo</td>
+                <td>git pull origin master</td>
+            </tr>
+            <tr>
+                <td>git push</td>
+                <td>Push commits to a remote git repository</td>
+                <td>git push -u origin master</td>
+            </tr>
+            <tr>
+                <td>git status</td>
+                <td>View git status</td>
+                <td>git status</td>
+            </tr>
+            <tr>
+                <td>git log</td>
+                <td>View git commit history</td>
+                <td>git log</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="post">
+    <div class="post-title">
+        <h2>HTML Cheat Sheet</h2>
+        <hr>
+    </div>
+    <div class="post-content">
+        <table class="html-table">
+            <tr>
+                <th>Tag</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>&lt;html&gt;</td>
+                <td>The wrapping html tag</td>
+            </tr>
+            <tr>
+                <td>&lt;head&gt;</td>
+                <td>A place to store header information like css stylesheets, title, etc.</td>
+            </tr>
+
+            <tr>
+                <td>&lt;title&gt;</td>
+                <td>The tage which holds the title of the page</td>
+            </tr>
+            <tr>
+                <td>&lt;meta&gt;</td>
+                <td>Stores meta information of the file, such as character set</td>
+            </tr>
+            <tr>
+                <td>&lt;body&gt;</td>
+                <td>Contains the actual content of the page</td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>A block-element which has defined styling</td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                <td>Header tags for bigger information. After h4 is a meme</td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>A tage to store information through other &lt;tX&gt; tags</td>
+            </tr>
+            <tr>
+                <td>&lt;link&gt;</td>
+                <td>Link another resource, such as css</td>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>Inline image tag</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="post">
+    <div class="post-title">
+        <h2>CSS Cheat Sheet</h2>
+        <hr>
+    </div>
+    <div class="post-content">
+        <table class="css-table">
+            <tr>
+                <th>Entry</th>
+                <th>Definition</th>
+                <th>Values/Examples</th>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>The class selector</td>
+                <td>.class-name</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>The id selector</td>
+                <td>#id-name</td>
+            </tr>
+            <tr>
+                <td>h1,body,etc.</td>
+                <td>The element selector; selects all elements of this tag</td>
+                <td>h1,body,html,a,img,etc.</td>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>Change the background color of an element</td>
+                <td>rgb(x,y,z), #abcdef, white, black, etc.</td>
+            </tr>
+            <tr>
+                <td>text-align</td>
+                <td>Align the contents within an element</td>
+                <td>center, left, right, justify</td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Define the style for a border</td>
+                <td>dashed, solid, double, groove, etc.</td>
+            </tr>
+            <tr>
+                <td>display</td>
+                <td>Change how to display the elements withing an element</td>
+                <td>flex, absolute, fixed, etc.</td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>Change the space around an element; like package peanuts</td>
+                <td>padding: 10px</td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>Change the margin width between an element</td>
+                <td>margin-top, margin-right, margin, etc</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Change the width of an element</td>
+                <td>width:100%, width:auto, etc.</td>
+            </tr>
+            <tr>
+                <td>font-family</td>
+                <td>Change the font settings for an element</td>
+                <td>monospace, "Sans Serif", etc.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

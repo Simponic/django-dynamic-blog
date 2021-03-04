@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}Blog {{ blog_entry.id }} {% endblock %}
+
+{% block content %}
+<div class = "post">
+    <div class = "post-title">
+        <h2>{{ blog_entry.title }}</h2>
+    </div>
+    <div class = "post-content">
+        <div class = "post-left">
+            <img style="width:100%" src="{% with 'blog/img/'|add:blog_entry.image_path as image_static %}{%static image_static %}{% endwith %}" alt="{{ blog_entry.image_desc }}">
+        </div>
+        <div class = "post-right">
+            <p>
+                {{ blog_entry.content }}
+            </p>
+        </div>
+    </div>
+    {% for comment in comments %}
+    <div class = "comment">
+        <strong><p><a href="mailto:{{ comment.email }}">{{ comment.commenter }}</a></strong>: {{ comment.posted }}</p>
+        <p>{{ comment.content }}</p>
+    </div>
+    {% endfor %}
+    <div class = "comment" id="makecomment">
+        <form action="{% url 'blog:comment' blog_entry.id %}" method="post">
+            {% csrf_token %}
+            <input type="text" id = "username" name="username" value="Username"><br>
+            <input type="email" id = "email" name="email" value="Email"><br>
+            <textarea rows = "5" cols="50" name="content">
+Enter your comment here...
+            </textarea><br>
+            <input type="submit" value="Comment">
+        </form>
+    </div>
+
+</div>
+{% endblock %}

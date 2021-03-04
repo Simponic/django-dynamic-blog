@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>Seconds since Jan 1, 1970: {{ unix_timestamp }}</h1>
+<div class = "post">
+    <div class = "post-title">
+        <h2>About Me</h2>
+    </div>
+    <div class = "post-content">
+        <div class = "post-left">
+            <img style="width:100%" src="{% static 'blog/img/man.jpg' %}" alt="Picture of fake client">
+        </div>
+        <div class = "post-right">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+            <p>Ricardo's search immaculateness palpitating Tillman's ohmmeters impolitenesses arithmetical robocalled Houdini sworn graduated mobilization's quiet Ismail's hampered dreamless raceme seventieths ninepin unpalatable belatedly Parnell's transfinite forsaking Lithuania's insurgent's underhandedly waterhole Oranjestad travesty bogeyed cloud's horribleness fogged dirtball tot's lacing verbatim TN heterodoxy's Rickenbacker's necromancer's churlishness Franciscans propagandists structured plaintiff's Elanor mismatch </p>
+        </div>
+    </div>
+</div>
+<div class = "post">
+    <div class = "post-title">
+        <h2>Favorite Things</h2>
+        <p>Note: these are not my favorite things</p>
+    </div>
+    <div class = "post-content">
+        <div class = "post-left">
+            <img style="width:100%" src="{% static 'blog/img/cheese_rolling.jpg' %}" alt="Person doing cheese rolling">
+            <p>My favorite sport is cheese rolling</p>
+        </div>
+        <div class = "post-left">
+            <img style="width:100%" src="{% static 'blog/img/elephant.jpg' %}" alt="Picture of elephant">
+            <p>My favorite animal is an elephant</p>
+        </div>
+        <div class = "post-right">
+            <img style="width:100%" src="{% static 'blog/img/bread.jpg' %}" alt="Picture of someone rolling bread" >
+            <p>My favorite activity is eating</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% for entry in latest_blogs %}
+<div class = "post" id = "post{{ entry.id }}">
+    <div class = "post-title">
+        <a href = "{% url 'blog:blog' entry.id %}"><h2>{{ entry.title }}</h2></a>
+        <p>By {{ entry.author }}</p>
+    </div>
+    <div class = "post-content">
+        <div class = "post-left">
+            <img style="width:100%" src="{% with 'blog/img/'|add:entry.image_path as image_static %}{%static image_static %}{% endwith %}" alt="{{ entry.image_desc }}">
+        </div>
+        <div class = "post-right">
+            <p>
+                {{ entry.content|truncatewords:100 }}
+            </p>
+        </div>
+    </div>
+    <p>Published: {{ entry.posted }}</p>
+    <p><a href = "{% url 'blog:blog' entry.id %}#makecomment">{{ entry.comment_set.count }} Comments</a></p>
+</div>
+{% endfor %}
+{% endblock %}

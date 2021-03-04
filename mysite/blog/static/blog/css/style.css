@@ -1,0 +1,101 @@
+body {
+	background-color: wheat;
+	font-family: 'Source Code Pro', monospace;
+}
+
+
+.title {
+	color: teal;
+	text-align: center;
+    border-bottom: 5px solid black;
+}
+
+#content {
+	background-color: white;
+	max-width: 1000px;
+	border-radius: 5px;	
+	margin: auto;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+.post {
+	border: 2px solid black;
+	margin: 3px;
+}
+
+.post-content {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.post-title {
+	text-align: center;
+}
+
+.post-left {
+	flex: 30%;
+	border-right: 5px solid black;
+	padding: 10px;
+}
+
+.post-right {
+	flex: 70%;
+	padding: 10px;
+}
+
+.screenshot:hover {
+	/* https://stackoverflow.com/questions/19104018/how-to-expand-an-image-in-html-by-clicking-on-it */
+	transition: all .3s ease-in;
+	opacity: 1;
+	transform: scale(5);
+}
+
+tr:nth-child(even) {
+	background-color:#bbbbbb;	
+}
+
+.git-table {
+	width:100%;
+	background-color:#dddddd;
+}
+
+.git-table th {
+	border-style: dotted;
+	text-align: left;
+}
+
+.bash-table {
+	width:100%;
+	background-color:#aaaaaa;
+}
+
+.bash-table th {
+	border-style: dashed;
+	text-align: left;
+}
+
+.html-table {
+	width:100%;
+	background-color: #cccccc;	
+}
+
+.css-table {
+	width:100%;
+	background-color:#dddddd;
+}
+
+.css-table th {
+	border-style: solid;
+}
+
+.comment {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-color: teal;
+	border-style: solid;
+	border-radius: 5px;
+	display: block;
+}
